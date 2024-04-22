@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Header() {
   return (
-    <div className="w-screen h-screen flex flex-wrap justify-center content-center pl-5 pr-5">
+    <div className="w-screen h-screen md:h-screen flex flex-wrap justify-center content-start md:content-center pl-5 pr-5 mt-8 md:mt-0">
       <div className="md:basis-1/2 flex justify-center items-center">
         <div className="h-auto text-center md:text-start md:w-5/6">
           <p className='font-serif text-xl mb-4'>ABOUT FURNITURE</p>
