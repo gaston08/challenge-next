@@ -26,6 +26,9 @@ export default function Header() {
             src={"/2.jpg"}
             alt="Picture of the author"
             sizes="100vw"
+            priority={true}
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMElEQVR4nGM4dfbK15//rz1+t/vUJQZHQYYZ+WlyBmoMfAwMMaHuZTnJmalR8lJsAJsNEDwkY4s/AAAAAElFTkSuQmCC"
             style={{
               width: "auto",
               height: "20%",
