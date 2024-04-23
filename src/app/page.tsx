@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Testimonials from "./components/Testimonials";
 import LearnMore from "./components/LearnMore";
 import Products from "./components/Products";
+import Discount from "./components/Discount";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Testimonials />
       <LearnMore />
       <Products />
+      <Discount />
     </div>
   );
 }
