@@ -4,6 +4,7 @@ import Testimonials from "./components/Testimonials";
 import LearnMore from "./components/LearnMore";
 import Products from "./components/Products";
 import Discount from "./components/Discount";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <LearnMore />
       <Products />
       <Discount />
+      <Footer />
     </div>
   );
 }
