@@ -1,4 +1,23 @@
 import Image from "next/image";
+import { imgType } from "@/app/utils/interface";
+
+const imgTestimonials: Array<imgType> = [
+  {
+    src: "/cards/card1.jpg",
+    base64:
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMElEQVR4nGO4d+92XW1ecUXRv///GLoa8yXl1JbOnvD4/lUGe0MVSSYGZyPVhoJEAI3KETF5NwIUAAAAAElFTkSuQmCC",
+  },
+  {
+    src: "/cards/card2.jpg",
+    base64:
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMElEQVR4nGP4/e7p6d3rNy2ZMaWng8HXz2tiTWZGkK2/tSqDspSUBAODkbzQjlULAHieD2/p1xkpAAAAAElFTkSuQmCC",
+  },
+  {
+    src: "/cards/card3.jpg",
+    base64:
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMklEQVR4nAEnANj/ANXNwurb1P/17//7+ACym4bZilfemW23k34AIxkBIgAAJwgAa1hC8osTn3h+2hsAAAAASUVORK5CYII=",
+  },
+];
 
 export default function Testimonials() {
   return (
@@ -8,18 +27,16 @@ export default function Testimonials() {
       </h1>
       <div className="flex gap-10 flex-wrap justify-center">
         <Card
-          src="/cards/card1.jpg"
-          dataUrl={
-            "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMElEQVR4nGO4d+92XW1ecUXRv///GLoa8yXl1JbOnvD4/lUGe0MVSSYGZyPVhoJEAI3KETF5NwIUAAAAAElFTkSuQmCC"
-          }
+          src={imgTestimonials[0].src}
+          dataUrl={imgTestimonials[0].base64}
         />
         <Card
-          src="/cards/card2.jpg"
-          dataUrl="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMElEQVR4nGP4/e7p6d3rNy2ZMaWng8HXz2tiTWZGkK2/tSqDspSUBAODkbzQjlULAHieD2/p1xkpAAAAAElFTkSuQmCC"
+          src={imgTestimonials[1].src}
+          dataUrl={imgTestimonials[1].base64}
         />
         <Card
-          src="/cards/card3.jpg"
-          dataUrl="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMklEQVR4nAEnANj/ANXNwurb1P/17//7+ACym4bZilfemW23k34AIxkBIgAAJwgAa1hC8osTn3h+2hsAAAAASUVORK5CYII="
+          src={imgTestimonials[2].src}
+          dataUrl={imgTestimonials[2].base64}
         />
       </div>
     </div>

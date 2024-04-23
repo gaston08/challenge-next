@@ -1,13 +1,20 @@
 import Image from "next/image";
+import { imgType } from "@/app/utils/interface";
 
-export default function Header() {
+const img: imgType = {
+  src: "/learnmore.jpg",
+  base64:
+    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMklEQVR4nAEnANj/AP396+3q5VJKTUA4OQCno5FPS0oLAwgaEhMAwr69jomIm5SSxcXFb6wSPCA6qT8AAAAASUVORK5CYII=",
+};
+
+export default function LearnMore() {
   return (
     <div className="mt-8">
       <div className="hidden  w-screen h-screen md:h-screen md:flex flex-wrap justify-center content-start md:content-center pl-5 pr-5 mt-8 md:mt-0">
         <div className="basis-full md:basis-1/2 flex justify-center items-center mt-12 md:mt-0">
           <div className="overflow-hidden relative">
             <Image
-              src={"/learnmore.jpg"}
+              src={img.src}
               alt="Picture of the author"
               sizes="100vw"
               style={{
@@ -17,7 +24,7 @@ export default function Header() {
               width={500}
               height={300}
               placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMklEQVR4nAEnANj/AP396+3q5VJKTUA4OQCno5FPS0oLAwgaEhMAwr69jomIm5SSxcXFb6wSPCA6qT8AAAAASUVORK5CYII="
+              blurDataURL={img.base64}
             />
           </div>
         </div>
@@ -48,7 +55,7 @@ export default function Header() {
         className="md:hidden relative overflow-hidden bg-cover bg-no-repeat"
         style={{
           backgroundPosition: "50%",
-          backgroundImage: "url('/learnmore.jpg')",
+          backgroundImage: `url('${img.src}')`,
           height: "100vh",
         }}
       >

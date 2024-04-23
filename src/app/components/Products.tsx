@@ -2,6 +2,13 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useBreakpoint } from "@/app/utils/useBreakPoint";
+import { imgType } from "@/app/utils/interface";
+
+const product: imgType = {
+  src: "/product.jpg",
+  base64:
+    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMElEQVR4nGPYf3zr/SfX33158fvPRwYGPobYZN+KmoyiogQGRiFWKSVJOWVpBi4GAJvADxYpyn6YAAAAAElFTkSuQmCC",
+};
 
 export default function Products() {
   const { isMd } = useBreakpoint("md");
@@ -9,7 +16,7 @@ export default function Products() {
     return isMd ? 8 : 2;
   });
 
-  const [isMounted, setIsMounted] = useState(false);
+  const [isMounted, setIsMounted] = useState<boolean>(false);
 
   useEffect(() => {
     setIsMounted(true);
@@ -37,7 +44,7 @@ export default function Products() {
               className="relative max-w-sm rounded overflow-hidden shadow-lg"
             >
               <Image
-                src={"/product.jpg"}
+                src={product.src}
                 alt="Picture of the author"
                 sizes="100vw"
                 style={{
@@ -47,7 +54,7 @@ export default function Products() {
                 width={500}
                 height={300}
                 placeholder="blur"
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMElEQVR4nGPYf3zr/SfX33158fvPRwYGPobYZN+KmoyiogQGRiFWKSVJOWVpBi4GAJvADxYpyn6YAAAAAElFTkSuQmCC"
+                blurDataURL={product.base64}
               />
               <ShoppingCartIcon />
             </div>

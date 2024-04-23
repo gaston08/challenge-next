@@ -1,4 +1,11 @@
 import Image from "next/image";
+import { imgType } from "@/app/utils/interface";
+
+const imgHeader: imgType = {
+  src: "/2.jpg",
+  base64:
+    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMElEQVR4nGM4dfbK15//rz1+t/vUJQZHQYYZ+WlyBmoMfAwMMaHuZTnJmalR8lJsAJsNEDwkY4s/AAAAAElFTkSuQmCC",
+};
 
 export default function Header() {
   return (
@@ -23,12 +30,12 @@ export default function Header() {
       <div className="basis-full md:basis-1/2 flex justify-center items-center mt-12 md:mt-0">
         <div className="overflow-hidden relative">
           <Image
-            src={"/2.jpg"}
+            src={imgHeader.src}
             alt="Picture of the author"
             sizes="100vw"
             priority={true}
             placeholder="blur"
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMElEQVR4nGM4dfbK15//rz1+t/vUJQZHQYYZ+WlyBmoMfAwMMaHuZTnJmalR8lJsAJsNEDwkY4s/AAAAAElFTkSuQmCC"
+            blurDataURL={imgHeader.base64}
             style={{
               width: "auto",
               height: "20%",
