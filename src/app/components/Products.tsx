@@ -46,6 +46,8 @@ export default function Products() {
                 }}
                 width={500}
                 height={300}
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMElEQVR4nGPYf3zr/SfX33158fvPRwYGPobYZN+KmoyiogQGRiFWKSVJOWVpBi4GAJvADxYpyn6YAAAAAElFTkSuQmCC"
               />
               <ShoppingCartIcon />
             </div>

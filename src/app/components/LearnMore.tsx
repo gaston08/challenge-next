@@ -16,6 +16,8 @@ export default function Header() {
               }}
               width={500}
               height={300}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMklEQVR4nAEnANj/AP396+3q5VJKTUA4OQCno5FPS0oLAwgaEhMAwr69jomIm5SSxcXFb6wSPCA6qT8AAAAASUVORK5CYII="
             />
           </div>
         </div>
